@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENTS REGISTRATION </title>
+</head>
+<body>
+<div style="background-color: rgb(63, 63, 230);">
+<fieldset>
+<h1 align="center">STUDENT REGISTRATION FORM</h1>
+<p align="center">Fill The Below Details To Register As a Student</p>
+</fieldset>
+</div>
+
+<form>
+    <fieldset>
+    <legend>Personal Information</legend>
+
+    <label for="fullname">FULL NAME</label><br>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter Name"><br>
+
+    <div align="right">
+        <label for="email">EMAIL ADDRESS</label><br>
+        <input type="email" id="email" name="email" placeholder="Email Address"><br>
+    </div>
+
+    <label for="dob">Date Of Birth</label><br>
+    <input type="date" id="dob" name="dob"><br>
+
+    <div align="right">
+        <label for="phone">Phone Number</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
+    </div>
+
+    <label>Gender</label><br>
+    <input type="radio" id="male" name="gender" value="MALE">
+    <label for="male">MALE</label>
+    <input type="radio" id="female" name="gender" value="FEMALE">
+    <label for="female">FEMALE</label>
+    <input type="radio" id="other" name="gender" value="OTHER">
+    <label for="other">OTHER</label>
+
+    <div align="right">
+    <label for="Address">Address</label><br>
+    <textarea id="Address" name="Address" placeholder="Enter Address"></textarea>
+    </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Academic Details</legend>
+        <label for="Course">Course</label>
+        <input type="text" id="Course" name="Course" placeholder="Enter Course">
+        <div align="right">
+        <label for="College/University Name :"> College/University Name</label>
+        <input type="text" id="College/University Name" name="College/University Name" placeholder="Enter College/University Name">
+        </div>
+        <label for="Select Your Year">Select Your Year </label>
+        <input type="text" id="Select Your Year" name="Select Your Year" placeholder="Select Your Year">
+        <div align="right">
+        <label for="Enrollment Number">Enrollment Number</label>
+        <input type="text" id="Enrollment Number" name="Enrollment Number" placeholder="Enrollment Number">
+        </div>
+    </fieldset>
+
+
+
+        <fieldset>
+        <legend>Additional Information</legend>
+        <label for="Reson for Registeration">Reson for Registeration</label><br>
+        <input type="text" id="Reson for Registeration" name="Reson for Registeration" placeholder="Reson for Registeration"><br>
+        <label for="Comments(Optional)">Comments(Optional)</label><br>
+        <textarea id="Comments(Optional)" name="Comments(Optional)" placeholder="Any Additional Information"></textarea>
+        
+    </fieldset>
+
+    <div align="center" style="background-color: rgb(114, 114, 233);">
+    <input type="submit" value="Submit">
+    <input type="submit" value="Reset">
+    </div>
+
+
+</form>
+</body>
+</html>   
