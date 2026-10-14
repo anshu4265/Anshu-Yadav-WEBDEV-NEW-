@@ -16,14 +16,14 @@
 <form>
     <fieldset>
     <legend>Personal Information</legend>
-
+    
     <label for="fullname">FULL NAME</label><br>
     <input type="text" id="fullname" name="fullname" placeholder="Enter Name"><br>
 
-    <div align="right">
-        <label for="email">EMAIL ADDRESS</label><br>
-        <input type="email" id="email" name="email" placeholder="Email Address"><br>
-    </div>
+    
+    <label for="email">EMAIL ADDRESS</label><br>
+    <input type="email" id="email" name="email" placeholder="Email Address"><br>
+    
 
     <label for="dob">Date Of Birth</label><br>
     <input type="date" id="dob" name="dob"><br>
@@ -50,7 +50,15 @@
     <fieldset>
         <legend>Academic Details</legend>
         <label for="Course">Course</label>
-        <input type="text" id="Course" name="Course" placeholder="Enter Course">
+        <select id="Course" name="Course list" form="courseform">
+            <option value="None">None</option>
+            <option value="B.tech">B.Tech</option>
+            <option value="B.Sc">B.Sc</option>
+            <option value="pharmecy">pharmecy</option>
+            <option value="nursing">Nursing</option>
+            <option value="BBA">BBA</option>
+            <option value="L.B.A.">L.B.A.</option>
+        </select><br>
         <div align="right">
         <label for="College/University Name :"> College/University Name</label>
         <input type="text" id="College/University Name" name="College/University Name" placeholder="Enter College/University Name">
@@ -74,8 +82,8 @@
         
     </fieldset>
 
-    <div align="center" style="background-color: rgb(114, 114, 233);">
-    <input type="submit" value="Submit">
+    <div align="center" style="background-color: rgb(63, 63, 230);">
+    <input type="submit" value="Register">
     <input type="submit" value="Reset">
     </div>
 
