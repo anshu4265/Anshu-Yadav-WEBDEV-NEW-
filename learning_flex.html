@@ -1,0 +1,58 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Flexbox Example</title>
+
+    <style>
+        /* Parent: Flex Container */
+        .container {
+            display: flex;
+            background-color: DodgerBlue;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        /* Direct children: Flex Items */
+        .container div {
+            background-color: #f1f1f1;
+            padding: 20px;
+            font-size: 24px;
+            text-align: center;
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Create a Flex Container</h1>
+
+    <!-- Flex Container -->
+    <div class="container">
+
+        <!-- Flex Items -->
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+
+    </div>
+
+    <p>
+        Flexbox must have a parent element with the
+        display property set to flex or inline-flex.
+    </p>
+
+    <p>
+        Direct child elements of a flex container
+        automatically become flex items.
+    </p>
+
+</body>
+
+</html>
+```
