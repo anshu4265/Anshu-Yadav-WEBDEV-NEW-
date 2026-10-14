@@ -1,67 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>CSS Positioning</title>
-<style>
-.container {
-    position: relative;
-    width: 1570px;
-    height: 900px;
+  <meta charset="UTF-8">
+  <title>CSS Positioning</title>
+  <style>
 
-    background-image: url("anshu photo.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-    border: 2px solid #333;
-}
+    body {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        font-family: "Times New Roman", serif;
+    }
 
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
 
-    .pos-item {
-        position: absolute;
-        font-family: sans-serif;
-        font-size: 14px;
+    .name-grid {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 8px;
+        color: black;
+        font-size: 12px;
         font-weight: bold;
     }
 
-    .top-left {
-        top: 10px;
-        left: 10px;
+    .name-grid div:nth-child(1),
+    .name-grid div:nth-child(4),
+    .name-grid div:nth-child(7) {
+        justify-content: flex-start;
     }
 
-    .top-right {
-        top: 10px;
-        right: 10px;
+    .name-grid div:nth-child(2),
+    .name-grid div:nth-child(5),
+    .name-grid div:nth-child(8) {
+        justify-content: center;
     }
 
-    .center {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    .name-grid div:nth-child(3),
+    .name-grid div:nth-child(6),
+    .name-grid div:nth-child(9) {
+        justify-content: flex-end;
     }
 
-
-    .bottom-left {
-        bottom: 10px;
-        left: 10px;
+    .name-grid div {
+        display: flex;
     }
 
-    .bottom-right {
-        bottom: 10px;
-        right: 10px;
+    .name-grid div:nth-child(-n+3) {
+        align-items: flex-start;
     }
-</style>
+
+    .name-grid div:nth-child(n+4):nth-child(-n+6) {
+        align-items: center;
+    }
+
+    .name-grid div:nth-child(n+7) {
+        align-items: flex-end;
+    }
+  </style>
 </head>
 <body>
+    
+    <img src="anshu photo.jpeg" alt="Background photo" class="background">
 
-<div class="container">
-    <div class="pos-item top-left">Anshu Yadav</div>
-    <div class="pos-item top-right">Anshu Yadav</div>
-    <div class="pos-item center">Anshu Yadav</div>
-    <div class="pos-item bottom-left">Anshu Yadav</div>
-    <div class="pos-item bottom-right">Anshu Yadav</div>
-</div>
+    <div class="name-grid">
+        <div>Anshu</div>
+        <div>Anshu</div>
+        <div>Anshu</div>
 
+        <div>Anshu</div>
+        <div>Anshu</div>
+        <div>Anshu</div>
+
+        <div>Anshu</div>
+        <div>Anshu</div>
+        <div>Anshu</div>
+    </div>
 </body>
 </html>
